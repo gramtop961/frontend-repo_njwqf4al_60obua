@@ -1,22 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+// Curated selection featuring One Piece characters and BTS
 const images = [
   {
     src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
-    label: 'Anime Street Aesthetic',
+    label: 'Monkey D. Luffy — One Piece',
   },
   {
-    src: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=60',
-    label: 'Neon Arcade Vibes',
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'Roronoa Zoro — One Piece',
   },
   {
-    src: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=60',
-    label: 'K‑Pop Concert Energy',
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'BTS at the AMAs',
   },
   {
-    src: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=60',
-    label: 'Stage & Spotlight',
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'BTS — Billboard Music Awards',
   },
 ];
 
@@ -35,7 +36,7 @@ const AnimatedGallery = () => {
       <div className="relative mx-auto max-w-6xl px-6 py-14 sm:py-20">
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Anime & K‑Pop Showcase</h2>
-          <p className="mt-2 text-slate-600">A little preview of the vibes for Maulana & Hani’s celebration.</p>
+          <p className="mt-2 text-slate-600">Special picks featuring One Piece and BTS for Maulana & Hani’s celebration.</p>
         </div>
 
         <motion.div
@@ -81,7 +82,7 @@ const AnimatedGallery = () => {
               className="flex items-center justify-center rounded-xl bg-white/70 px-4 py-3 text-lg shadow-sm backdrop-blur"
             >
               <span className="mr-2 text-xl">{emoji}</span>
-              <span className="text-slate-700">{i % 2 === 0 ? 'Anime' : 'K‑Pop'}</span>
+              <span className="text-slate-700">{i % 2 === 0 ? 'One Piece' : 'BTS'}</span>
             </motion.div>
           ))}
         </div>
