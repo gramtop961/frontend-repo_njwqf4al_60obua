@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from './components/Hero';
+import AnimatedGallery from './components/AnimatedGallery';
 import Countdown from './components/Countdown';
 import Couple from './components/Couple';
 import EventDetails from './components/EventDetails';
@@ -8,6 +9,7 @@ const App = () => {
   return (
     <div className="min-h-screen bg-white antialiased">
       <Hero />
+      <AnimatedGallery />
       <Countdown />
       <Couple />
       <EventDetails />
