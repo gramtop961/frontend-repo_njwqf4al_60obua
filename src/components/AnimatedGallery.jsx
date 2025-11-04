@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-// Curated selection featuring One Piece characters and BTS
+// Expanded selection featuring One Piece characters and BTS members for a livelier vibe
 const images = [
+  // One Piece
   {
     src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
     label: 'Monkey D. Luffy — One Piece',
@@ -13,17 +14,62 @@ const images = [
   },
   {
     src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
-    label: 'BTS at the AMAs',
+    label: 'Nami — One Piece',
   },
   {
     src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
-    label: 'BTS — Billboard Music Awards',
+    label: 'Sanji — One Piece',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'Tony Tony Chopper — One Piece',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'Nico Robin — One Piece',
+  },
+  // BTS group & members (Wikimedia Commons)
+  {
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'BTS — American Music Awards 2017',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'BTS — Billboard Music Awards 2019',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'RM — BTS',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'Jin — BTS',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'Suga — BTS',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'J-Hope — BTS',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'Jimin — BTS',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'V — BTS',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIxNzI2NDR8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    label: 'Jungkook — BTS',
   },
 ];
 
 const cardVariants = {
   hidden: { opacity: 0, y: 24 },
-  show: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, type: 'spring', stiffness: 120, damping: 14 } }),
+  show: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.05, type: 'spring', stiffness: 120, damping: 14 } }),
 };
 
 const AnimatedGallery = () => {
@@ -36,7 +82,23 @@ const AnimatedGallery = () => {
       <div className="relative mx-auto max-w-6xl px-6 py-14 sm:py-20">
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Anime & K‑Pop Showcase</h2>
-          <p className="mt-2 text-slate-600">Special picks featuring One Piece and BTS for Maulana & Hani’s celebration.</p>
+          <p className="mt-2 text-slate-600">Lebih rame! Koleksi One Piece & BTS spesial untuk Maulana & Hani.</p>
+        </div>
+
+        {/* Tag marquee */}
+        <div className="mt-6 overflow-hidden">
+          <motion.div
+            className="flex gap-6 whitespace-nowrap text-sm text-slate-600"
+            animate={{ x: ['0%', '-50%'] }}
+            transition={{ duration: 18, ease: 'linear', repeat: Infinity }}
+          >
+            {["One Piece", "Straw Hat", "Luffy", "Zoro", "Nami", "Sanji", "Chopper", "Robin", "BTS", "RM", "Jin", "Suga", "J-Hope", "Jimin", "V", "Jungkook"].map((t) => (
+              <span key={t} className="rounded-full bg-slate-100 px-3 py-1">#{t}</span>
+            ))}
+            {["One Piece", "Straw Hat", "Luffy", "Zoro", "Nami", "Sanji", "Chopper", "Robin", "BTS", "RM", "Jin", "Suga", "J-Hope", "Jimin", "V", "Jungkook"].map((t) => (
+              <span key={`${t}-dup`} className="rounded-full bg-slate-100 px-3 py-1">#{t}</span>
+            ))}
+          </motion.div>
         </div>
 
         <motion.div
